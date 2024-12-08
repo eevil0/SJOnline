@@ -130,9 +130,9 @@ code {
 .side-menu {
     grid-column: 1 / 2; /* Span only the first column */
     grid-row: 2 / 3; /* Span the second row */
-    background-color: #444; /* Optional: Add background color */
+    background-color: #d9d9d9; /* Optional: Add background color */
     padding: 10px;
-    color: white;
+    color: #1b1b1b;
 }
 
     .side-menu ul {
@@ -145,7 +145,7 @@ code {
         }
 
             .side-menu ul li a {
-                color: white;
+                color: #1b1b1b;
                 text-decoration: none;
                 font-weight: bold;
             }
