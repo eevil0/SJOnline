@@ -11,12 +11,22 @@
     };
 };
 
+const getScreenDpi = () => {
+    return {
+        value:
+            window.devicePixelRatio * 96 ||
+            document.devicePixelRatio * 96 ||
+            document.body.devicePixelRatio * 96
+    };
+};
+
 window.screenChangeInterop = {
     addChangeListener: function (dotNetReference) {
 
         const notifyChange = () => {
             const dimensions = getScreenDimensions();
-            dotNetReference.invokeMethodAsync("UpdateScreenState", dimensions.width, dimensions.height);
+            const dpi = getScreenDpi();
+            dotNetReference.invokeMethodAsync("UpdateScreenState", dimensions.width, dimensions.height, dpi.value);
         };
 
         let resizeTimeout;
