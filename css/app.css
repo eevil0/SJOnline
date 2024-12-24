@@ -1,4 +1,4 @@
-html, body {
+html {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -69,12 +69,44 @@ code {
     color: #c02d76;
 }
 
+/*Custom layout design*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/Images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;*/ /* Space between the rectangles */
+/*}
+
+.rectangle {
+    background-color: grey;
+    opacity: 0.9;*/ /* Optional: makes the grey slightly transparent */
+    /*border-radius: 10px;*/ /* Rounded corners */
+    /*padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/ /* Optional: adds some depth */
+    /*width: 40%;*/ /* Adjust the size as needed */
+    /*height: 80%;*/ /* Adjust the size as needed */
+    /*overflow-y: auto;*/ /* If content overflows */
+/*}*/
+
+
 /* Main container layout */
 .main-container {
     display: grid;
-    grid-template-columns: 250px 1fr; /* Left column 200px, right column flexible */
+    gap: 50px;
+    grid-template-columns: 200px 1fr; /* Left column 200px, right column flexible */
     grid-template-rows: 250px auto; /* Top row 80px, bottom row auto */
     height: 100vh; /* Full viewport height */
+    opacity: 0.95;    
+    padding: 20px;
 }
 
 /* Logo section (top-left) */
@@ -84,8 +116,8 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white; /* Optional: Add background color */
-    color: white;
+    /*background-color: white;*/ /* Optional: Add background color */
+    /*color: white;*/
 }
 
     .logo-container img {
@@ -97,9 +129,12 @@ code {
 .side-menu {
     grid-column: 1 / 2; /* Span only the first column */
     grid-row: 2 / 3; /* Span the second row */
-    background-color: #d9d9d9; /* Optional: Add background color */
+    background-color: #f9f9f9; 
     padding: 10px;
     color: #1b1b1b;
+    height: fit-content;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
     .side-menu ul {
@@ -128,6 +163,9 @@ code {
     padding: 20px;
     background-color: #f9f9f9; /* Optional: Add background color */
     overflow: auto; /* Handle scrolling if content overflows */
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .loading-layout {
