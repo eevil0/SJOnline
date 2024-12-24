@@ -123,6 +123,7 @@ body {
     .logo-container img {
         height: 200px; /* Adjust logo size */
         width: auto; /* Maintain aspect ratio */
+        border-radius: 100px;
     }
 
 /* Side menu (left-bottom) */
