@@ -65,39 +65,6 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
-.loading-progress {
-    position: relative;
-    display: block;
-    width: 8rem;
-    height: 8rem;
-    margin: 20vh auto 1rem auto;
-}
-
-    .loading-progress circle {
-        fill: none;
-        stroke: #e0e0e0;
-        stroke-width: 0.6rem;
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);
-    }
-
-        .loading-progress circle:last-child {
-            stroke: #1b6ec2;
-            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-            transition: stroke-dasharray 0.05s ease-in-out;
-        }
-
-.loading-progress-text {
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
-}
-
-    .loading-progress-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
-    }
-
 code {
     color: #c02d76;
 }
@@ -162,3 +129,48 @@ code {
     background-color: #f9f9f9; /* Optional: Add background color */
     overflow: auto; /* Handle scrolling if content overflows */
 }
+
+.loading-layout {
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Optional: Add background color */
+    color: white;
+}
+    .loading-layout img {
+        height: 100px;
+        width:auto;
+        animation: fadeInOut 3s infinite;
+        /*-moz-animation: fadeOut 2s infinite;
+        -webkit-animation: fadeOut 2s infinite;
+        -o-animation: fadeOut 2s infinite;*/
+    }
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+/*#app > svg, #app > .loading-progress-text {
+    display: none;
+}*/
