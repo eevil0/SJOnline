@@ -7,7 +7,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: url('../Images/background.jpg') no-repeat center center fixed;
+    background: url('../Images/background-intro.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -24,8 +24,8 @@ body {
 
 .main-container-portrait {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Two columns: logo (1 part), menu (2 parts) */
-    grid-template-rows: 250px 1fr; /* Two rows: header and main body */
+    grid-template-columns: 1fr 200px; /* Two columns: logo (1 part), menu (2 parts) */
+    grid-template-rows: auto 1fr; /* Two rows: header and main body */
     height: 100vh;
     opacity: 0.8;
 }
@@ -55,6 +55,11 @@ body {
         border-radius: 100px;
     }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
 /* Menu styles */
 .menu-landscape {
     grid-column: 1 / 2; /* Span only the first column */
@@ -69,9 +74,9 @@ body {
 .menu-portrait {
     grid-column: 2 / 3; /* Second column in the top row */
     grid-row: 1 / 2; /* Same row as logo */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: flex-start;*/
     background-color: #f9f9f9;
     padding: 10px;
     color: #1b1b1b;
@@ -96,7 +101,7 @@ body {
             }
 
                 .menu-landscape ul li a:hover, .menu-portrait ul li a:hover {
-                    color: #aaa; /* Optional: Hover effect */
+                    color: #858585; /* Optional: Hover effect */
                 }
 
 /* Main content */
