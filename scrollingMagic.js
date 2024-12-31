@@ -11,3 +11,8 @@ function changeBodyBackground(imageUrl) {
     document.body.style.backgroundPosition = "center";
     document.body.style.transition = "background-image 1s ease-in-out";
 }
+
+window.preloadImage = (src) => {
+    const img = new Image();
+    img.src = src;
+};

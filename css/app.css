@@ -124,8 +124,89 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+    .contact-logos{
+        height: 100px;
+        width: auto;
+        border-radius:50px
+    }
 
-.loading-layout {
+.contact-div {
+    display: flex;
+    /*justify-content: space-between;*/ /* Justifies the content, spreads images evenly */
+    align-items: center; /* Vertically centers the images */
+    gap: 20px; /* Adds space between the images */
+}
+
+.contact-logos {
+    display: inline-block;
+    display: flex;
+    justify-content: space-between; /* Justifies the content, spreads images evenly */
+    align-items: center; /* Vertically centers the images */
+    gap: 20px; /* Adds space between the images */
+}
+
+.contact-logos img {
+    max-width: 100px; /* Ensures images are responsive */
+    height: auto; /* Keeps the aspect ratio */
+}
+    .contact-logos img:hover {
+        width:90px;
+        height:auto;
+    }
+
+.quanfa-svg {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+    .quanfa-svg text {
+        font-family: Arial, sans-serif;
+    }
+
+    .quanfa-svg rect {
+        fill: white;
+        stroke: black;
+    }
+
+    .quanfa-svg line {
+        stroke: black;
+    }
+
+.name-table {
+    width: 30%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+    .name-table caption {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .name-table thead th {
+        background-color: #f2f2f2;
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .name-table tbody td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .name-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    /*Loading styles*/
+    .loading-layout {
     height: 100vh;
     display: flex;
     align-items: center;
